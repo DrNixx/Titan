@@ -99,16 +99,16 @@ class Commands():
         await message.channel.send("Unhandled webservice error in kicking guest user!")
 
     async def invite(self, message):
-        await message.channel.send("You can invite Titan to your server by visiting this link: https://discordapp.com/oauth2/authorize?&client_id=299403260031139840&scope=bot&permissions=641195117")
+        await message.channel.send("You can invite Chess-Online to your server by visiting this link: https://discordapp.com/oauth2/authorize?&client_id=614471086545043467&scope=bot&permissions=641195117")
 
     async def server(self, message):
-        await message.channel.send("Join the Titan Embeds Discord server! https://discord.gg/pFDDtcN")
+        await message.channel.send("Join the Chess-Online Discord server! https://discord.gg/Rfw6C2C")
 
     async def shard(self, message):
-        await message.channel.send("This instance of Titan Embeds Discord Bot is running on shard **{}**. There are **{}** shards in total.".format(message.guild.shard_id, self.client.shard_count))
+        await message.channel.send("This instance of Chess-Online Discord Bot is running on shard **{}**. There are **{}** shards in total.".format(message.guild.shard_id, self.client.shard_count))
 
     async def help(self, message):
-        await message.channel.send("Commands available on: https://titanembeds.com/about\nTo setup an embed please visit: https://titanembeds.com/user/dashboard")
+        await message.channel.send("Commands available on: https://titan.chess-online.com/about\nTo setup an embed please visit: https://titan.chess-online.com/user/dashboard")
 
     async def members(self, message):
         headers = {"Authorization": self.config["titan-web-app-secret"]}
@@ -145,7 +145,7 @@ class Commands():
         embed_description = embed_description + "**Total Members Online: __{}__**".format(len(users["authenticated"]) + len(users["unauthenticated"]))
         embed = discord.Embed(
             title = "Currently Online Embed Members",
-            url = "https://TitanEmbeds.com/",
+            url = "https://titan.chess-online.com/",
             color = 7964363,
             description = embed_description
         )

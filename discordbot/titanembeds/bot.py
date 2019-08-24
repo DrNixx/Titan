@@ -25,10 +25,10 @@ class Titan(discord.AutoShardedClient):
     def __init__(self):
         super().__init__(
             max_messages=10000,
-            activity=discord.Game(name="Embed your Discord server! Visit https://TitanEmbeds.com/")
+            activity=discord.Game(name="Embed your Discord server! Visit https://titan.chess-online.com/")
         )
         self.aiosession = aiohttp.ClientSession(loop=self.loop)
-        self.http.user_agent += ' TitanEmbeds-Bot'
+        self.http.user_agent += ' Chess-Online Bot'
         self.redisqueue = RedisQueue(self, config["redis-uri"])
         self.command = Commands(self, config)
         self.socketio = SocketIOInterface(self, config["redis-uri"])
